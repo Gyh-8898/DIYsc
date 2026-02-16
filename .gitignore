@@ -26,11 +26,11 @@ dist-ssr
 # env files
 .env
 .env.*
-backend/.env
 miniprogram/.env
 miniprogram/.env.*
 !backend/.env.example
 !backend/.env.bt.template
+!backend/.env
 
 # Local databases / temp artifacts
 *.db
