@@ -9,12 +9,19 @@ import { defaultRateLimit } from './middlewares/rate-limit.middleware';
 import { expirePendingOrders } from './services/order.service';
 
 dotenv.config();
+const DEFAULT_PROD_CORS_ORIGINS = 'https://sc.y-98.cn';
 
 function parseCorsOrigins(raw: unknown): string[] {
   return String(raw || '')
     .split(',')
     .map((item) => item.trim())
     .filter((item) => Boolean(item));
+}
+
+function getCorsOriginsRaw(): string {
+  if (process.env.CORS_ORIGINS) return String(process.env.CORS_ORIGINS);
+  if (process.env.NODE_ENV === 'production') return DEFAULT_PROD_CORS_ORIGINS;
+  return '';
 }
 
 function assertProductionConfig() {
@@ -30,7 +37,7 @@ function assertProductionConfig() {
     throw new Error('ADMIN_PASSWORD is not properly configured for production.');
   }
 
-  const corsOrigins = parseCorsOrigins(process.env.CORS_ORIGINS);
+  const corsOrigins = parseCorsOrigins(getCorsOriginsRaw());
   if (corsOrigins.length === 0) {
     throw new Error('CORS_ORIGINS must be configured for production (comma-separated origins).');
   }
@@ -41,7 +48,7 @@ assertProductionConfig();
 const app = express();
 const PORT = Number(process.env.PORT || 3001);
 
-const corsOrigins = parseCorsOrigins(process.env.CORS_ORIGINS);
+const corsOrigins = parseCorsOrigins(getCorsOriginsRaw());
 const isProd = process.env.NODE_ENV === 'production';
 
 app.use(

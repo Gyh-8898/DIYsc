@@ -12,10 +12,10 @@ function hash(text: string): string {
 }
 
 async function exchangeCodeForOpenId(code: string): Promise<string | null> {
-  const appid = process.env.WECHAT_APPID;
+  const appid = process.env.WECHAT_APPID || 'wx989b6d6bee5f8867';
   const secret = process.env.WECHAT_SECRET;
 
-  if (!appid || !secret) {
+  if (!secret) {
     return null;
   }
 

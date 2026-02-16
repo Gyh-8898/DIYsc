@@ -29,6 +29,8 @@ dist-ssr
 backend/.env
 miniprogram/.env
 miniprogram/.env.*
+!backend/.env.example
+!backend/.env.bt.template
 
 # Local databases / temp artifacts
 *.db
