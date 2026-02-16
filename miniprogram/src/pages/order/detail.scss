@@ -1,0 +1,250 @@
+.order-detail-page {
+  min-height: 100vh;
+  background: #f6f7f9;
+}
+
+.order-detail-loading,
+.order-detail-empty {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8d94a0;
+  font-size: 28rpx;
+}
+
+.order-detail-scroll {
+  min-height: 100vh;
+}
+
+.order-detail-body {
+  padding: 22rpx 20rpx calc(180rpx + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+}
+
+.order-detail-card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.order-detail-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12rpx;
+}
+
+.order-detail-status {
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.order-detail-status.pending {
+  color: #b91c1c;
+}
+
+.order-detail-status.production {
+  color: #c2410c;
+}
+
+.order-detail-status.shipped {
+  color: #1d4ed8;
+}
+
+.order-detail-status.completed {
+  color: #15803d;
+}
+
+.order-detail-status.default {
+  color: #4b5563;
+}
+
+.order-detail-time,
+.order-detail-no {
+  display: block;
+  color: #6b7280;
+  font-size: 22rpx;
+  line-height: 1.6;
+}
+
+.order-detail-copy {
+  margin-top: 10rpx;
+  width: 148rpx;
+  height: 56rpx;
+  border-radius: 999rpx;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-detail-section-title {
+  display: block;
+  color: #111827;
+  font-size: 28rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx;
+}
+
+.order-detail-item {
+  border-radius: 16rpx;
+  background: #f8fafc;
+  padding: 16rpx;
+  margin-bottom: 12rpx;
+}
+
+.order-detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.order-detail-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8rpx;
+}
+
+.order-detail-item-name {
+  color: #111827;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.order-detail-item-price {
+  color: #111827;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.order-detail-item-spec {
+  display: block;
+  color: #6b7280;
+  font-size: 21rpx;
+}
+
+.order-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+
+.order-detail-row-label {
+  color: #6b7280;
+  font-size: 23rpx;
+}
+
+.order-detail-row-value {
+  color: #111827;
+  font-size: 23rpx;
+}
+
+.order-detail-row-value.strong {
+  font-weight: 700;
+  font-size: 28rpx;
+}
+
+.order-detail-row-value.discount {
+  color: #b91c1c;
+}
+
+.order-detail-address,
+.order-detail-remark {
+  display: block;
+  color: #111827;
+  font-size: 23rpx;
+  line-height: 1.7;
+}
+
+.order-detail-logistics-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14rpx;
+}
+
+.order-detail-refresh {
+  min-width: 120rpx;
+  height: 52rpx;
+  border-radius: 999rpx;
+  background: #111827;
+  color: #fff;
+  font-size: 21rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-detail-logistics-empty {
+  border-radius: 16rpx;
+  background: #f8fafc;
+  color: #9ca3af;
+  font-size: 22rpx;
+  text-align: center;
+  padding: 20rpx;
+}
+
+.order-detail-logistics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.order-detail-logistics-item {
+  border-radius: 16rpx;
+  background: #f8fafc;
+  padding: 16rpx;
+}
+
+.order-detail-logistics-title {
+  display: block;
+  color: #111827;
+  font-size: 24rpx;
+  font-weight: 600;
+  margin-bottom: 4rpx;
+}
+
+.order-detail-logistics-meta {
+  display: block;
+  color: #6b7280;
+  font-size: 21rpx;
+  line-height: 1.5;
+}
+
+.order-detail-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #edf1f5;
+  background: #fff;
+  padding: 14rpx 16rpx calc(14rpx + env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.order-detail-btn {
+  flex: 1;
+  height: 74rpx;
+  border-radius: 999rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.order-detail-btn.dark {
+  background: #111111;
+  color: #fff;
+}
+
+.order-detail-btn.light {
+  background: #f2f4f7;
+  color: #374151;
+}

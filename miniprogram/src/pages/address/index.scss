@@ -1,0 +1,177 @@
+.address-container {
+    height: 100vh;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+}
+
+/* List */
+.address-list {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.address-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address-info {
+    flex: 1;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.user-phone {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.tag {
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+.tag-default {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.tag-label {
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+.address-detail {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.4;
+}
+
+.edit-btn {
+    padding: 8px;
+    color: #9ca3af;
+}
+
+.add-btn-wrapper {
+    padding: 16px;
+    background-color: white;
+    border-top: 1px solid #f3f4f6;
+}
+
+.btn-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    border-radius: 9999px;
+    border: 1px solid #d1d5db;
+    color: #6b7280;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Form */
+.address-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9fafb;
+}
+
+.form-body {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.form-group {
+    background-color: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.form-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #f9fafb;
+}
+
+.form-label {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.form-input {
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    border: none;
+    outline: none;
+}
+
+.form-textarea {
+    width: 100%;
+    min-height: 80px;
+    font-size: 14px;
+    color: #333;
+}
+
+.tags-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.tag-option {
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+.tag-option.active {
+    background-color: black;
+    color: white;
+}
+
+.switch-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.btn-save {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border-radius: 9999px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}

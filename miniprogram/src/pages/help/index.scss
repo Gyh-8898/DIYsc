@@ -1,0 +1,85 @@
+.help-page {
+  min-height: 100vh;
+  background: #f6f7f9;
+}
+
+.help-scroll {
+  min-height: 100vh;
+}
+
+.help-body {
+  padding: 24rpx 20rpx calc(40rpx + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+}
+
+.help-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+.help-title {
+  display: block;
+  color: #111827;
+  font-size: 28rpx;
+  font-weight: 700;
+  margin-bottom: 14rpx;
+}
+
+.help-desc {
+  display: block;
+  color: #6b7280;
+  font-size: 23rpx;
+  line-height: 1.6;
+}
+
+.help-row {
+  border-radius: 16rpx;
+  background: #f8fafc;
+  padding: 18rpx;
+  margin-bottom: 12rpx;
+}
+
+.help-row:last-child {
+  margin-bottom: 0;
+}
+
+.help-row-title {
+  display: block;
+  color: #111827;
+  font-size: 24rpx;
+  font-weight: 600;
+  margin-bottom: 6rpx;
+}
+
+.help-row-text {
+  display: block;
+  color: #6b7280;
+  font-size: 22rpx;
+  line-height: 1.6;
+}
+
+.help-action-group {
+  display: flex;
+  gap: 12rpx;
+  margin-top: 14rpx;
+}
+
+.help-action-btn {
+  flex: 1;
+  height: 72rpx;
+  border-radius: 999rpx;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-action-btn.primary {
+  background: #111827;
+  color: #ffffff;
+}

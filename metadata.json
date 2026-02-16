@@ -1,0 +1,7 @@
+{
+  "name": "Gem Oratopia Mini Program",
+  "description": "A WeChat Mini Program simulation for designing custom beaded bracelets (Gem Oratopia clone). Features include a 3D-like bead design workbench, shopping cart, community plaza, and user profile management.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

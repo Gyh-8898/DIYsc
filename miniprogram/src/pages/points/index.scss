@@ -1,0 +1,102 @@
+.points-page {
+  min-height: 100vh;
+  background: #f6f7f9;
+}
+
+.points-scroll {
+  min-height: 100vh;
+}
+
+.points-body {
+  padding: 24rpx 20rpx 140rpx;
+  box-sizing: border-box;
+}
+
+.points-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 24rpx;
+}
+
+.points-title {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16rpx;
+}
+
+.points-empty {
+  border-radius: 16rpx;
+  background: #f8fafc;
+  color: #9ca3af;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 24rpx;
+}
+
+.points-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.points-item {
+  border-radius: 16rpx;
+  background: #f8fafc;
+  padding: 18rpx;
+}
+
+.points-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.points-desc {
+  color: #111827;
+  font-size: 24rpx;
+}
+
+.points-amount {
+  font-size: 26rpx;
+  font-weight: 700;
+}
+
+.points-amount.plus {
+  color: #16a34a;
+}
+
+.points-amount.minus {
+  color: #dc2626;
+}
+
+.points-time {
+  display: block;
+  color: #6b7280;
+  font-size: 21rpx;
+  margin-top: 8rpx;
+}
+
+.points-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16rpx 20rpx calc(16rpx + env(safe-area-inset-bottom));
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+}
+
+.points-btn {
+  height: 74rpx;
+  border-radius: 999rpx;
+  background: #111827;
+  color: #ffffff;
+  font-size: 26rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

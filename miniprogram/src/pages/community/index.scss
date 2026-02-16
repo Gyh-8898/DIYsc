@@ -1,0 +1,340 @@
+.comm-home {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+  padding: 0 16px calc(18px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+}
+
+.comm-safe-top {
+  width: 100%;
+}
+
+.comm-header {
+  padding-top: 24px;
+}
+
+.comm-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.comm-subtitle {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6a7282;
+}
+
+.comm-notice {
+  margin-top: 16px;
+  background: #fffbeb;
+  border: 1px solid #fef3c6;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.comm-notice-icon {
+  width: 22px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2px;
+}
+
+.comm-notice-text {
+  flex: 1;
+  font-size: 12px;
+  line-height: 19.5px;
+  color: #973c00;
+}
+
+.comm-cards {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comm-card {
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.comm-card:active {
+  opacity: 0.96;
+}
+
+.comm-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+}
+
+.comm-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comm-card-icon--bazi {
+  background: linear-gradient(135deg, #ff8904 0%, #f6339a 100%);
+}
+
+.comm-card-icon--liuyao {
+  background: linear-gradient(135deg, #51a2ff 0%, #00b8db 100%);
+}
+
+.comm-card-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.comm-card-title {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.comm-card-desc {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 22.75px;
+  color: #6a7282;
+}
+
+.comm-card-chevron {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.comm-tag-row {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.comm-tag {
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+}
+
+.comm-tag-text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.tag-work {
+  background: #fff7ed;
+}
+
+.tag-work .comm-tag-text {
+  color: #f54900;
+}
+
+.tag-wealth {
+  background: #fdf2f8;
+}
+
+.tag-wealth .comm-tag-text {
+  color: #e60076;
+}
+
+.tag-love {
+  background: #faf5ff;
+}
+
+.tag-love .comm-tag-text {
+  color: #9810fa;
+}
+
+.tag-health {
+  background: #eff6ff;
+}
+
+.tag-health .comm-tag-text {
+  color: #155dfc;
+}
+
+.tag-job {
+  background: #eff6ff;
+}
+
+.tag-job .comm-tag-text {
+  color: #155dfc;
+}
+
+.tag-marriage {
+  background: #ecfeff;
+}
+
+.tag-marriage .comm-tag-text {
+  color: #0092b8;
+}
+
+.tag-invest {
+  background: #eef2ff;
+}
+
+.tag-invest .comm-tag-text {
+  color: #4f39f6;
+}
+
+.tag-peace {
+  background: #f0fdfa;
+}
+
+.tag-peace .comm-tag-text {
+  color: #009689;
+}
+
+.comm-card-divider {
+  height: 1px;
+  background: #f3f4f6;
+  margin: 0 24px;
+}
+
+.comm-feature-row {
+  display: flex;
+  padding: 16px 24px 18px;
+}
+
+.comm-feature {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.comm-feature-title {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.comm-feature-sub {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a7282;
+}
+
+.comm-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.comm-stat {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 14px;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.comm-stat-num {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.comm-stat-label {
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a7282;
+}
+
+/* Draft gate overlay (not in Figma, keep visually consistent) */
+.gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px 12px calc(18px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+}
+
+.gate-panel {
+  width: 100%;
+  border-radius: 16px;
+  background-color: #ffffff;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+.gate-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.gate-sub {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6a7282;
+  line-height: 1.6;
+}
+
+.gate-actions {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gate-btn {
+  width: 100%;
+  border-radius: 9999px;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  color: #101828;
+}
+
+.gate-btn.primary {
+  background: #101828;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.gate-btn.cancel {
+  background-color: #f3f4f6;
+  border-color: #f3f4f6;
+  color: #6a7282;
+}

@@ -1,0 +1,35 @@
+.agreement-page {
+  min-height: 100vh;
+  background: #f6f7f9;
+}
+
+.agreement-scroll {
+  min-height: 100vh;
+}
+
+.agreement-body {
+  padding: 24rpx 20rpx;
+}
+
+.agreement-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 26rpx 24rpx;
+}
+
+.agreement-title {
+  display: block;
+  color: #111827;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 18rpx;
+}
+
+.agreement-content {
+  display: block;
+  color: #374151;
+  font-size: 24rpx;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+

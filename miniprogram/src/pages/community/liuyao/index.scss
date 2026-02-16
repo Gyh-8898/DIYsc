@@ -1,0 +1,263 @@
+.comm-modal {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.comm-modal-spacer {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.comm-sheet {
+  margin-top: auto;
+  background: #ffffff;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+}
+
+.comm-sheet-header {
+  height: 61px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comm-sheet-title {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.comm-sheet-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comm-sheet-save {
+  font-size: 14px;
+  line-height: 20px;
+  color: #6a7282;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.comm-sheet-save:active {
+  background: #f3f4f6;
+  color: #101828;
+}
+
+.comm-sheet-close {
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comm-sheet-close:active {
+  background: #f3f4f6;
+}
+
+.comm-sheet-body {
+  padding: 16px 20px;
+  box-sizing: border-box;
+}
+
+.comm-field {
+  margin-top: 16px;
+}
+
+.comm-field:first-child {
+  margin-top: 0;
+}
+
+.comm-label {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #364153;
+  margin-bottom: 8px;
+}
+
+.comm-input {
+  width: 100%;
+  height: 42px;
+  box-sizing: border-box;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #101828;
+}
+
+.comm-brief {
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 14px;
+  padding: 14px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 12px;
+}
+
+.comm-brief-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.comm-brief-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.comm-brief-title {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.comm-brief-desc {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #6a7282;
+}
+
+.comm-time-bar {
+  height: 42px;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.comm-time-value {
+  flex: 1;
+  font-size: 14px;
+  line-height: 20px;
+  color: #101828;
+}
+
+.comm-time-value.placeholder {
+  color: #9ca3af;
+}
+
+.comm-time-btn {
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #6a7282;
+}
+
+.comm-time-btn:active {
+  opacity: 0.92;
+}
+
+.comm-coin-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comm-coin-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comm-coin-row-label {
+  width: 48px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a7282;
+  text-align: center;
+}
+
+.comm-coin-row-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.comm-coin-btn {
+  height: 40px;
+  border-radius: 10px;
+  background: #2b7fff;
+  border: 1px solid #155dfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px rgba(190, 219, 255, 0.9), 0 4px 6px rgba(190, 219, 255, 0.9);
+}
+
+.comm-coin-btn.yin {
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.comm-coin-btn:active {
+  opacity: 0.92;
+}
+
+.comm-coin-btn-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.comm-coin-btn.yin .comm-coin-btn-text {
+  color: #155dfc;
+}
+
+.comm-sheet-footer {
+  border-top: 1px solid #f3f4f6;
+  padding: 16px 20px calc(16px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.comm-primary-btn {
+  width: 100%;
+  height: 52px;
+  border-radius: 10px;
+  background: #101828;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.comm-primary-btn:active {
+  opacity: 0.92;
+}

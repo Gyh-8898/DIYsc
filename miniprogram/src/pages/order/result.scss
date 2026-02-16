@@ -1,0 +1,48 @@
+.order-result-page {
+  min-height: 100vh;
+  background: #f6f7f9;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.order-result-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 30rpx 24rpx;
+}
+
+.order-result-title {
+  display: block;
+  color: #111827;
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+
+.order-result-desc {
+  display: block;
+  color: #6b7280;
+  font-size: 24rpx;
+  line-height: 1.7;
+}
+
+.order-result-id {
+  display: block;
+  margin-top: 10rpx;
+  color: #374151;
+  font-size: 22rpx;
+}
+
+.order-result-btn {
+  margin-top: 24rpx;
+  height: 74rpx;
+  border-radius: 999rpx;
+  background: #111827;
+  color: #ffffff;
+  font-size: 26rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
