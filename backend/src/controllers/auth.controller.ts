@@ -1,5 +1,6 @@
 ﻿import { NextFunction, Request, Response } from 'express';
 import { createHash } from 'crypto';
+import https from 'https';
 import { success } from '../utils/response';
 import { AppError } from '../utils/AppError';
 import { prisma } from '../lib/prisma';
@@ -20,26 +21,47 @@ async function exchangeCodeForOpenId(code: string): Promise<string | null> {
 
   const url = `https://api.weixin.qq.com/sns/jscode2session?appid=${encodeURIComponent(appid)}&secret=${encodeURIComponent(secret)}&js_code=${encodeURIComponent(code)}&grant_type=authorization_code`;
 
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 5000);
+  return new Promise((resolve) => {
+    let settled = false;
+    const done = (value: string | null) => {
+      if (settled) return;
+      settled = true;
+      resolve(value);
+    };
 
-  try {
-    const response = await fetch(url, { signal: controller.signal });
-    if (!response.ok) {
-      return null;
-    }
+    const req = https.get(url, (res) => {
+      const statusCode = Number(res.statusCode || 0);
+      if (statusCode < 200 || statusCode >= 300) {
+        res.resume();
+        done(null);
+        return;
+      }
 
-    const data = (await response.json()) as { openid?: string; errcode?: number; errmsg?: string };
-    if (!data.openid) {
-      return null;
-    }
+      let body = '';
+      res.setEncoding('utf8');
+      res.on('data', (chunk: string) => {
+        body += chunk;
+        if (body.length > 1024 * 1024) {
+          req.destroy(new Error('response too large'));
+        }
+      });
+      res.on('end', () => {
+        try {
+          const data = JSON.parse(body) as { openid?: string; errcode?: number; errmsg?: string };
+          done(data.openid ? String(data.openid) : null);
+        } catch {
+          done(null);
+        }
+      });
+    });
 
-    return data.openid;
-  } catch (_error) {
-    return null;
-  } finally {
-    clearTimeout(timer);
-  }
+    req.setTimeout(5000, () => {
+      req.destroy(new Error('timeout'));
+      done(null);
+    });
+
+    req.on('error', () => done(null));
+  });
 }
 
 async function buildUniqueReferralCode(seed: string): Promise<string> {
